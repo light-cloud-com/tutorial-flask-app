@@ -5,8 +5,8 @@ from flask import Flask, jsonify, render_template, request
 
 app = Flask(__name__)
 
-# Shown next to every amount. Set CURRENCY on Light Cloud to change it.
-CURRENCY = os.environ.get("CURRENCY", "$")
+# Shown after every amount. Set CURRENCY on Light Cloud to change it.
+CURRENCY = os.environ.get("CURRENCY", "USD")
 
 
 def split_bill(total: str, people: str, tip_percent: str) -> dict:

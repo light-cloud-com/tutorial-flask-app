@@ -21,4 +21,4 @@ pip install -r requirements.txt
 flask --app app run --port 8000
 ```
 
-`CURRENCY` sets the currency symbol (default `$`).
+`CURRENCY` sets the currency code shown after amounts (default `USD`).

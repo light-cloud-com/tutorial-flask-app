@@ -22,8 +22,8 @@
 
   {% if result %}
     <p class="result">
-      {{ result.people }} people pay <strong>{{ currency }}{{ result.each }}</strong> each
-      ({{ currency }}{{ result.total }} + {{ currency }}{{ result.tip }} tip).
+      {{ result.people }} people pay <strong>{{ result.each }} {{ currency }}</strong> each
+      ({{ result.total }} + {{ result.tip }} tip).
     </p>
   {% endif %}
 </body>
