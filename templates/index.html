@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Split the bill</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <h1>Split the bill</h1>
+
+  <form method="post">
+    <label>Total ({{ currency }}) <input name="total" value="{{ form.total }}" inputmode="decimal" required></label>
+    <label>People <input name="people" value="{{ form.people }}" inputmode="numeric" required></label>
+    <label>Tip (%) <input name="tip" value="{{ form.tip }}" inputmode="decimal" required></label>
+    <button type="submit">Split</button>
+  </form>
+
+  {% if error %}
+    <p class="error">{{ error }}</p>
+  {% endif %}
+
+  {% if result %}
+    <p class="result">
+      {{ result.people }} people pay <strong>{{ currency }}{{ result.each }}</strong> each
+      ({{ currency }}{{ result.total }} + {{ currency }}{{ result.tip }} tip).
+    </p>
+  {% endif %}
+</body>
+</html>
