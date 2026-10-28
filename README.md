@@ -1,5 +1,7 @@
 # tutorial-flask-app
 
+[![Deploy to Light Cloud](https://light-cloud.com/button.svg)](https://console.light-cloud.com/new?repo=https://github.com/light-cloud-com/tutorial-flask-app)
+
 A small Flask app ("Split the bill") used in the Light Cloud tutorial
 [A Flask app in production, without writing a Dockerfile](https://blog.light-cloud.com/tutorials/deploy-a-flask-app).
 
